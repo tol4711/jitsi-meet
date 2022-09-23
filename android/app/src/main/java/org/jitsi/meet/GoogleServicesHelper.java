@@ -31,7 +31,10 @@ final class GoogleServicesHelper {
                     }
 
                     if (dynamicLink != null) {
-                        activity.join(dynamicLink.toString());
+                        String link = dynamicLink.toString();
+                        if (link != null && link.isEmpty() == false) {
+                            activity.join(dynamicLink.toString());
+                        }
                     }
                 });
         }
